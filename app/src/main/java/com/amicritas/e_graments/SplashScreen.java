@@ -22,12 +22,11 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        printKeyHas();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashScreen.this, MainActivity.class));
+                startActivity(new Intent(SplashScreen.this, SignUpActivity.class));
                 finish();
             }
         }, 2000);
@@ -39,7 +38,7 @@ public class SplashScreen extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
     }
 
-    private void printKeyHas() {
+   /* private void printKeyHas() {
         try {
             PackageInfo info  = getPackageManager().getPackageInfo(getPackageName(),
                     PackageManager.GET_SIGNATURES);
@@ -53,5 +52,5 @@ public class SplashScreen extends AppCompatActivity {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }

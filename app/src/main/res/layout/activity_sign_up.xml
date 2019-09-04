@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/p"
+    tools:context=".SignUpActivity">
+
+
+    <ImageView
+        android:id="@+id/backIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="backPressed"
+        android:padding="5dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backIV"
+        android:gravity="center"
+        android:text="🆂🅸🅶🅽 🆄🅿"
+        android:textColor="@android:color/white"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:backgroundTint="@android:color/white"
+            android:hint="Enter Your Name"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:backgroundTint="@android:color/white"
+            android:hint="Enter Business Name"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:backgroundTint="@android:color/white"
+            android:hint="Enter Your NID"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment status:"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
+                android:textStyle="bold" />
+
+
+            <info.hoang8f.widget.FButton
+                android:layout_gravity="center_vertical"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_margin="15dp"
+                android:text="Paid"
+
+                android:layout_weight=".5"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:cornerRadius="12dp"
+                app:fButtonColor="#008000"
+                app:shadowEnabled="true"
+                app:shadowHeight="3dp" />
+
+            <info.hoang8f.widget.FButton
+                android:layout_gravity="center_vertical"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_margin="15dp"
+                android:text="Select"
+                android:layout_weight=".5"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:cornerRadius="12dp"
+                app:fButtonColor="#f51b00"
+                app:shadowEnabled="true"
+                app:shadowHeight="3dp" />
+
+        </LinearLayout>
+
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:cornerRadius="15dp"
+            app:fButtonColor="@color/colorPrimary"
+            app:shadowEnabled="true"
+            app:shadowHeight="3dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

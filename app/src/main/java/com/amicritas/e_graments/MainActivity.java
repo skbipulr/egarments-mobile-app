@@ -8,7 +8,10 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.facebook.accountkit.Account;
 import com.facebook.accountkit.AccountKit;
+import com.facebook.accountkit.AccountKitCallback;
+import com.facebook.accountkit.AccountKitError;
 import com.facebook.accountkit.AccountKitLoginResult;
 import com.facebook.accountkit.ui.AccountKitActivity;
 import com.facebook.accountkit.ui.AccountKitConfiguration;
@@ -55,7 +58,19 @@ public class MainActivity extends AppCompatActivity {
                 toastMessage = "Login Cancelled";
                 Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(this, "Success login", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(this, "Success login", Toast.LENGTH_SHORT).show();
+
+                AccountKit.getCurrentAccount(new AccountKitCallback<Account>() {
+                    @Override
+                    public void onSuccess(Account account) {
+                        startActivity(new Intent(MainActivity.this,PreSignUp.class));
+                    }
+
+                    @Override
+                    public void onError(AccountKitError accountKitError) {
+
+                    }
+                });
             }
         }
     }
