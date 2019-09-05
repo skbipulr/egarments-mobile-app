@@ -4,59 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="33dp"
-        android:textStyle="bold"
-        android:text="Sign Up"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="90dp"
-        />
+        android:text="Sign In"
+        android:textColor="@color/black"
+        android:textSize="33dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="16dp"
         android:layout_marginLeft="30dp"
-        android:text="Sign up to continue "
-        />
+        android:text="Sign in to continue "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:orientation="vertical"
-        android:gravity="center_vertical"
-        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:errorEnabled="true"
-            app:passwordToggleEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:hint="Name"
-                android:inputType="number"
-                android:text=""
-                android:backgroundTint="@android:color/black"
-                android:textColor="@color/black"
-                android:textColorHint="@android:color/darker_gray"
-                android:textSize="22sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_name"
@@ -75,7 +51,7 @@
                 android:inputType="number"
                 android:text=""
                 android:backgroundTint="@android:color/black"
-                android:textColor="@color/black"
+                android:textColor="@android:color/black"
                 android:textColorHint="@android:color/darker_gray"
                 android:textSize="22sp" />
 
@@ -101,13 +77,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
+
         <info.hoang8f.widget.FButton
             android:id="@+id/btnSelect"
             android:layout_width="match_parent"
             android:layout_height="54dp"
-            android:layout_weight="1"
             android:layout_marginTop="70dp"
-            android:text="Sign Up"
+            android:text="Login"
+            android:onClick="click"
             android:textSize="18dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
@@ -116,11 +93,51 @@
             android:textColor="@android:color/white"
             app:cornerRadius="20dp"
             app:fButtonColor="@color/colorPrimary"
-            app:shadowColor="@android:color/darker_gray"
+            app:shadowColor="#bbb"
             app:shadowEnabled="true"
-            android:background="@drawable/border_botton"
+            android:background="@drawable/button_selector"
             app:shadowHeight="1dp"
             />
+
+
+        <!--<Button
+            android:id="@+id/btnSelect"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="70dp"
+            android:text="Login"
+            android:onClick="click"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textAllCaps="false"
+            android:layout_centerVertical="true"
+            android:background="@drawable/custon_shawdo"
+            android:textColor="@android:color/white"
+            />-->
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:gravity="center_vertical"
+            android:text="   Login with facobook"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            app:cornerRadius="20dp"
+            app:fButtonColor="#3b5998"
+            app:shadowColor="@android:color/darker_gray"
+            app:shadowEnabled="true"
+            app:shadowHeight="1dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
