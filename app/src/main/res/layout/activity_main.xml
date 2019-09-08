@@ -33,6 +33,8 @@
         android:layout_width="100dp"
         android:layout_height="180dp" />
 
+
+
     <Button
         android:id="@+id/btn_sign_in"
         android:text="LOG IN"
@@ -44,4 +46,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+
+
+
+
+
 </com.google.android.flexbox.FlexboxLayout>

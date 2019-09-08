@@ -11,25 +11,45 @@ import android.os.Handler;
 import android.util.Base64;
 import android.util.Log;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class SplashScreen extends AppCompatActivity {
 
+    private ImageView logo;
+    private TextView tvAppName;
+    private Animation leftoright,righttoleft;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        logo        = findViewById(R.id.logo);
+        tvAppName   = findViewById(R.id.tvAppName);
+
+        leftoright  = AnimationUtils.loadAnimation(this,R.anim.lefttoright);
+        righttoleft = AnimationUtils.loadAnimation(this,R.anim.righttoleft);
+
+        logo.setAnimation(righttoleft);
+        tvAppName.setAnimation(leftoright);
+
+        printKeyHas();
+      //  getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 startActivity(new Intent(SplashScreen.this, LoginActivity.class));
                 finish();
             }
-        }, 2000);
+        }, 1500);
     }
 
     @Override
@@ -38,7 +58,8 @@ public class SplashScreen extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
     }
 
-   /* private void printKeyHas() {
+    //get print key from facebook kit
+    private void printKeyHas() {
         try {
             PackageInfo info  = getPackageManager().getPackageInfo(getPackageName(),
                     PackageManager.GET_SIGNATURES);
@@ -52,5 +73,5 @@ public class SplashScreen extends AppCompatActivity {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 }

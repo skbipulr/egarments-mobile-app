@@ -8,14 +8,59 @@
     tools:context=".SplashScreen">
 
 
-    <ImageView
+  <!--  <ImageView
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:layout_marginBottom="30dp"
         android:src="@drawable/logo"
         android:layout_centerInParent="true"
-        />
+        />-->
+
+    <ImageView
+        android:layout_width="347dp"
+        android:layout_height="347dp"
+        android:src="@drawable/ellipse2"
+        android:layout_marginLeft="-134dp"
+        android:layout_marginTop="-136dp" />
+
+    <ImageView
+        android:layout_width="347dp"
+        android:layout_height="347dp"
+        android:src="@drawable/ellipse2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-134dp"
+        android:layout_marginBottom="-136dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/logo"
+            android:text="graments"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/nexabold"
+            android:textColor="@color/gray"
+            android:textSize="50sp"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:text="E-"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:textSize="78dp"
+         android:src="@drawable/logog"
+            android:layout_marginBottom="-88sp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
 
 
 </RelativeLayout>
