@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reset Your Password"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checkedButton="@+id/phoneNumber"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/ic_phone_android_black_24dp"
+                android:text="Send code via phone"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:text="+**********73"
+                android:textSize="18dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/or"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:drawableLeft="@drawable/email_icon"
+                android:text="Send code via email"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:text="email@gmail.com"
+                android:textSize="18dp" />
+
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Continue"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp" />
+
+
+        <!--<com.google.android.material.button.MaterialButton
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:onClick="click"
+            android:textSize="18dp"
+            android:text="Phone number"
+            android:textAllCaps="false"
+            app:cornerRadius="16dp" />
+        <com.google.android.material.button.MaterialButton
+             android:id="@+id/email"
+             android:layout_width="match_parent"
+             android:layout_height="57dp"
+             android:layout_marginLeft="40dp"
+             android:layout_marginTop="10dp"
+             android:layout_marginRight="40dp"
+             android:gravity="center"
+             android:onClick="click"
+             android:textSize="18dp"
+             android:text="Email"
+             android:textAllCaps="false"
+             app:cornerRadius="16dp" />
+-->
+
+    </LinearLayout>
+
+</LinearLayout>

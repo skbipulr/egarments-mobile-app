@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="#F6F6F6"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -14,29 +14,45 @@
         android:layout_height="wrap_content">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="90dp"
-            android:text="Sign In"
-            android:textColor="@color/black"
-            android:textSize="33dp"
-            android:textStyle="bold" />
+        <FrameLayout
+            android:id="@+id/fm1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_circle">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="Sign in to continue "
-            android:textColor="@android:color/darker_gray"
-            android:textSize="16dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign In"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="33dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign in to continue "
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
@@ -123,7 +139,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="40dp"
                 android:gravity="center"
-                android:onClick="click"
+                android:onClick="clickProfile"
                 android:text="Sign In"
                 android:textAllCaps="false"
                 app:cornerRadius="25dp" />
@@ -140,6 +156,7 @@
                 android:text="Sign in with facebook"
                 android:textAllCaps="false"
                 app:cornerRadius="25dp"
+
                 app:icon="@drawable/ic_facebook" />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -151,7 +168,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Don't have no account?"
+                    android:text="Don't have an account?"
                     android:textSize="16dp" />
 
                 <TextView
